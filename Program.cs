@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
 using ConsoleAppOOPConcepts.Inheritance;
 using ConsoleAppOOPConcepts.Polymorphism;
 
@@ -9,5 +10,8 @@ inheritance.Action();
 // Polymorphism
 Polymorphism polymorphism = new();
 polymorphism.Action();
+
+GC.ReRegisterForFinalize(inheritance);
+System.GC.Collect();
 
 Console.ReadLine();
